@@ -22,5 +22,4 @@ Route::get('/about', function () {
     return view('about', ["title" => "About", "name" => "Jale", "email" => "jaleisme.id@gmail.com", "site" => "jaleisme.github.io"]);
 });
 Route::get('/posts', [PostController::class, 'index']);
-
-Route::get('posts/{slug}', [PostController::class, 'show']);
+Route::get('posts/{post:slug}', [PostController::class, 'show']);
