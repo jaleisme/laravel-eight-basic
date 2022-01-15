@@ -14,7 +14,7 @@
         <h2>
             <a class="text-decoration-none text-dark fw-bold" href="/posts/{{ $post->slug }}">{{ $post->title }}</a>
         </h2>
-        <p>By <a class="text-decoration-none text-dark fw-bold" href="">{{ $post->user->name }}</a> in <a class="text-decoration-none text-dark fw-bold" href="/category/{{ $post->postCategory->slug }}">{{ $post->postCategory->name }}</a></p>
+        <p>By <a class="text-decoration-none text-dark fw-bold" href="/authors/{{ $post->user->username }}">{{ $post->user->name }}</a> in <a class="text-decoration-none text-dark fw-bold" href="/category/{{ $post->postCategory->slug }}">{{ $post->postCategory->name }}</a></p>
         {{-- <h5>By: {{ $post["author"] }}</h5> --}}
         <p>{{ $post->excerpt }}...</p>
         <a class="btn btn-sm btn-dark" href="/posts/{{ $post->slug }}">Read more</a>
