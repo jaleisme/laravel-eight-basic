@@ -8,9 +8,8 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function index(){
-        // $blog_posts = Post::all();
-        $blog_posts = Post::latest()->get();
-        return view('posts', ["title" => "Posts", "posts" => $blog_posts]);
+        $blog_posts = Post::with(['user', 'postCategory'])->latest()->get();
+        return view('posts', ["title" => "All Posts", "posts" => $blog_posts]);
     }
 
     public function show(Post $post){
