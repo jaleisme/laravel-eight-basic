@@ -6,7 +6,7 @@
         <div class="col-8">
             <h2 class="fw-bold">{{ $post->title }}</h2>
             {{-- <h5>By: {{ $post["author"] }}</h5> --}}
-            <p>By <a class="text-decoration-none text-dark fw-bold" href="/authors/{{ $post->user->username }}">{{ $post->user->name }}</a> in <a class="text-decoration-none text-dark fw-bold" href="/category/{{ $post->postCategory->slug }}">{{ $post->postCategory->name }}</a></p>
+            <p>By <a class="text-decoration-none text-dark fw-bold" href="/posts?user={{ $post->user->username }}">{{ $post->user->name }}</a> in <a class="text-decoration-none text-dark fw-bold" href="/posts?category={{ $post->postCategory->slug }}">{{ $post->postCategory->name }}</a> {{ $post->created_at->diffForHumans() }}</p>
             <img src="https://source.unsplash.com/random/1200x300?{{ $post->postCategory->name }}" class="card-img-top" alt="{{ $post->postCategory->name }}">
             <article class="my-3">
                 <p>{!! $post->body !!}</p>
