@@ -1,6 +1,8 @@
 @extends('layouts.main')
 
 @section('content')
+<section class="old-post">
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12">
@@ -13,7 +15,7 @@
                     @endif
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Search post..." aria-label="Search post..." aria-describedby="button-addon2" name="search" value="{{ request('search') }}">
-                        <button class="btn btn-dark" type="submit">Search</button>
+                        <button class="btn btn-primary" type="submit">Search</button>
                     </div>
                 </form>
             </div>
@@ -32,7 +34,7 @@
                             </p>
                         </small>
                         <p class="card-text">{{ $posts[0]->excerpt }}...</p>
-                        <a class="btn btn-dark" href="/posts/{{ $posts[0]->slug }}">Read more</a>
+                        <a class="btn btn-primary" href="/posts/{{ $posts[0]->slug }}">Read more</a>
                     </div>
                 </div>
             </div>
@@ -54,7 +56,7 @@
                         <p class="card-text">{{ $post->excerpt }}</p>
                     </div>
                     <div class="card-footer bg-white border-0 pb-4">
-                        <a class="btn btn-dark" href="/posts/{{ $post->slug }}">Read more</a>
+                        <a class="btn btn-primary" href="/posts/{{ $post->slug }}">Read more</a>
                     </div>
                 </div>
             </div>
@@ -69,5 +71,6 @@
     @else
         <p class="text-center fs-4">No post found.</p>
     @endif
+</section>
 @endsection
 

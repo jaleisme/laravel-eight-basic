@@ -24,7 +24,9 @@
                     </div>
                     <button class="w-100 btn btn-md btn-dark" type="submit">Sign In</button>
                 </form>
-                <small class="text-muted">Doesn't have any account yet? <a href="/register" class="text-decoration-none text-dark fw-bold">Sign Up</a></small>
+                <div class="mt-2">
+                    <small class="text-muted">Doesn't have any account yet? <a href="/register" class="text-decoration-none text-dark fw-bold">Sign Up</a></small>
+                </div>
             </main>
         </div>
     </div>

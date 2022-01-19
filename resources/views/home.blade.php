@@ -5,7 +5,6 @@
 <section class="home bd-grid" id="home">
     <div class="home__data">
         <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Faizal</span><br> Graphics Designer</h1>
-
         <a href="https://wa.me/6281809042643" target="_blank" class="button">Get in touch</a>
     </div>
 

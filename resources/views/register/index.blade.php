@@ -46,7 +46,9 @@
                     </div>
                     <button class="w-100 btn btn-md btn-dark" type="submit">Sign Up</button>
                 </form>
-                <small class="text-muted">Already registered? <a href="/login" class="text-decoration-none text-dark fw-bold">Sign In</a></small>
+                <div class="mt-2">
+                    <small class="text-muted">Already registered? <a href="/login" class="text-decoration-none text-dark fw-bold">Sign In</a></small>
+                </div>
             </main>
         </div>
     </div>
