@@ -15,7 +15,7 @@ class RegisterController extends Controller
     public function store(Request $request){
         $rules = ['name' => 'required', 'username' => 'required|unique:users|min:3|max:20', 'email' => 'required|unique:users', 'password' => 'required|min:8'];
         $validated = $request->validate($rules);
-        $validated["password"] = Hash::make($validated["password"]);
+        $validated["password"] = bcrypt($validated["password"]);
         User::create($validated);
         return redirect('/login')->with('success', 'User registered successfully! Proceed to sign in.');
     }

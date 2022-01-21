@@ -18,16 +18,35 @@
                     </small></a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li>
-                            <a class="dropdown-item" href="/posts"><small>Posts</small></a>
+                            <a class="dropdown-item" href="/posts" style="font-size: 10pt;">Posts</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="/categories"><small>Categories</small></a>
+                            <a class="dropdown-item" href="/categories" style="font-size: 10pt;">Categories</a>
                         </li>
                     </ul>
                 </li>
+                @auth
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <small>Hello, {{ Auth::user()->name }}!
+                    </small></a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" style="font-size: 10pt;" href="/dashboard">Dashboard</a>
+                        </li>
+                        <li>
+                            <form action="/logout" method="post">
+                                @csrf
+                                <button type="submit" class="dropdown-item" style="font-size: 10pt;">Sign Out</button>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+                @else
                 <li class="nav-item">
                     <a class="nav-link" href="/login"><small>Sign In</small></a>
                 </li>
+                @endauth
             </ul>
         </div>
     </div>
